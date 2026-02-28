@@ -1,0 +1,51 @@
+{
+  "name": "svg-path-areas-splitter",
+  "version": "0.0.1",
+  "description": "Split SVG path d strings into individual area sub-paths",
+  "keywords": [
+    "area",
+    "geometry",
+    "path",
+    "split",
+    "svg"
+  ],
+  "license": "MIT",
+  "author": "Cason Kervis",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "prepublishOnly": "pnpm test && pnpm build",
+    "build": "tsdown",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt"
+  },
+  "dependencies": {
+    "svg-pathdata": "^8.0.0"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0",
+    "tsdown": "^0.21.0-beta.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "packageManager": "pnpm@10.29.2"
+}
