@@ -24,23 +24,24 @@
     "build": "tsdown",
     "test": "vitest run",
     "test:watch": "vitest",
-    "colorize": "pnpm build && node scripts/colorize.ts",
+    "colorize": "bun run script/colorize.ts",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "publint": "publint",
     "format": "oxfmt"
   },
   "dependencies": {
-    "svg-pathdata": "^8.0.0"
+    "svg-pathdata": "^8.0.0",
+    "ts-pattern": "^5.9.0"
   },
   "devDependencies": {
     "@inquirer/prompts": "^8.3.0",
     "@types/node": "^25.3.3",
-    "oxfmt": "^0.35.0",
-    "oxlint": "^1.50.0",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
     "publint": "^0.3.18",
     "simple-icons": "^16.10.0",
-    "tsdown": "^0.21.0-beta.2",
+    "tsdown": "^0.21.0",
     "typescript": "^5.9.3",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.0.18"
