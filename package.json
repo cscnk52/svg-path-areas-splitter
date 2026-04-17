@@ -1,6 +1,6 @@
 {
   "name": "svg-path-areas-splitter",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Split SVG path d strings into individual area sub-paths",
   "keywords": [
     "area",
