@@ -4,7 +4,9 @@ export default defineConfig({
   entry: ["src/index.ts"],
   format: ["esm"],
   fixedExtension: false,
-  sourcemap: true,
+  attw: {
+    profile: "esm-only",
+  },
   deps: {
     onlyBundle: "ts-pattern",
   },
