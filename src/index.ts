@@ -82,7 +82,7 @@ function assignToRegions(
   fillRule: FillRule,
 ): number[] {
   const n = depths.length;
-  const anchorOf = new Array<number>(n).fill(-1);
+  const anchorOf = Array.from({ length: n }, () => -1);
   const isAnchor = fillRule === "evenodd" ? (d: number) => d % 2 === 0 : (d: number) => d === 0;
 
   for (let i = 0; i < n; i++) {
