@@ -6,9 +6,7 @@ export type Point = {
 };
 
 export type ForceAbsolute<T> = T extends { relative: boolean }
-  ? Omit<T, "relative"> & {
-      relative: false;
-    }
+  ? T & { relative: false }
   : T;
 
 export type NormalizeSVGCommand = ForceAbsolute<
